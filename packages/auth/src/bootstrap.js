@@ -30,7 +30,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
 
 //se estivermos no ambiente de desenvolvimento ou iniciando a aplicação de forma isolada chamar a função mount imediatamente
 if (process.env.NODE_ENV === "development") {
-  const devRoot = document.querySelector("#_marketing-dev-root");
+  const devRoot = document.querySelector("#_auth-dev-root");
   if (devRoot) {
     mount(devRoot, { defaultHistory: createBrowserHistory() });
   }
