@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter , Route, Switch } from "react-router-dom";
 import {
   StylesProvider,
   createGenerateClassName,
@@ -19,7 +19,7 @@ export default () => {
   const [isSignIn, setIsSignIn] = useState(false);
 
   return (
-    <Router>
+    <BrowserRouter>
       <StylesProvider generateClassName={generateClassName}>
         <div>
           <Header onSignOut={() => setIsSignIn(false)} isSignIn={isSignIn} />
@@ -33,6 +33,6 @@ export default () => {
           </Suspense>
         </div>
       </StylesProvider>
-    </Router>
+    </BrowserRouter>
   );
 };
